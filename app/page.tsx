@@ -20,9 +20,9 @@ import { getProgressionChordName } from '@/lib/music/progressions'
 import { WOODS } from '@/lib/wood'
 
 const LEGEND = [
-  { swatch: 'bg-blue-600 text-white', symbol: 'R', title: 'Root', copy: 'Home base — start and resolve phrases here.' },
-  { swatch: 'bg-emerald-500 text-white', symbol: '3', title: 'Third', copy: 'Decides major or minor. The expressive note.' },
-  { swatch: 'bg-amber-500 text-white', symbol: '5', title: 'Fifth', copy: 'Stable against any chord. Half of a power chord.' },
+  { swatch: 'bg-blue-600 text-white', symbol: 'R', title: 'Root' },
+  { swatch: 'bg-emerald-500 text-white', symbol: '3', title: 'Third' },
+  { swatch: 'bg-amber-500 text-white', symbol: '5', title: 'Fifth' },
 ]
 
 export default function Home() {
@@ -149,16 +149,15 @@ export default function Home() {
           <div className="order-3 min-w-0 space-y-5 lg:col-start-2 lg:row-start-2">
             <div className="grid gap-5 sm:grid-cols-3">
               {LEGEND.map((item) => (
-                <Card key={item.title} className="p-5">
+                <Card key={item.title} className="p-3">
                   <div className="flex items-center gap-3">
                     <span
-                      className={`grid h-8 w-8 shrink-0 place-items-center rounded-full text-xs font-semibold ${item.swatch}`}
+                      className={`grid h-8 w-8 shrink-0 place-items-center rounded-none border-2 border-black font-pixel text-lg font-bold shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] ${item.swatch}`}
                     >
                       {item.symbol}
                     </span>
-                    <h3 className="text-sm font-semibold text-ink">{item.title}</h3>
+                    <h3 className="font-pixel text-xl uppercase tracking-widest text-black">{item.title}</h3>
                   </div>
-                  <p className="mt-2 text-sm leading-relaxed text-muted">{item.copy}</p>
                 </Card>
               ))}
             </div>
