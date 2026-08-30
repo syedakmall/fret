@@ -143,11 +143,9 @@ export default function Home() {
                 <span className="ml-auto">Click a note to hear it</span>
               </div>
             </Card>
-          </div>
-
-          {/* Reference material sits below the neck */}
-          <div className="order-3 min-w-0 space-y-5 lg:col-start-2 lg:row-start-2">
-            <div className="grid gap-5 sm:grid-cols-3">
+            
+            {/* Reference material sits below the neck */}
+            <div className="mt-5 grid gap-5 sm:grid-cols-3">
               {LEGEND.map((item) => (
                 <Card key={item.title} className="p-3">
                   <div className="flex items-center gap-3">
@@ -161,8 +159,9 @@ export default function Home() {
                 </Card>
               ))}
             </div>
-
           </div>
+
+
 
           {/* Controls */}
           <Card
