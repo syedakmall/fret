@@ -1,0 +1,10 @@
+# Next's metadata image routes emit extensionless files under `output: export`,
+# so Cloudflare can't infer a type and social crawlers reject them.
+/opengraph-image
+  Content-Type: image/png
+/twitter-image
+  Content-Type: image/png
+
+# Build-hashed assets never change under a given URL.
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
